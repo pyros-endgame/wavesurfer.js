@@ -425,7 +425,7 @@ WaveSurfer.Region = {
 
     onDrag: function (delta) {
         var maxEnd = this.wavesurfer.getDuration();
-        if ((this.end + delta) > maxEnd || (this.start + delta) < 0) {
+        if ((this.end + delta) > maxEnd || (this.start + delta) < 0 || delta == 0) {
             return;
         }
 
